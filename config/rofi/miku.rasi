@@ -1,0 +1,53 @@
+* {
+  font: "JetBrainsMono Nerd Font 11";
+  background: rgba(15,17,23,0.85);
+  foreground: #e6f7ff;
+  accent: #4dd0e1;
+  accent2: #00ffd5;
+  border: 1px;
+  border-color: @accent;
+  padding: 8px;
+}
+
+window {
+  transparency: "real";
+  border-radius: 14px;
+  border: @border;
+  border-color: @accent;
+  padding: 12px;
+  width: 600px;
+  location: center;
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+  spacing: 12px;
+}
+
+inputbar {
+  background: linear-gradient(135deg, rgba(77,208,225,0.15), rgba(0,255,213,0.10));
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(77,208,225,0.4);
+  font: "JetBrainsMono Nerd Font 12";
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  spacing: 6px;
+}
+
+element {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(22,27,34,0.75);
+  border: 1px solid transparent;
+}
+
+element selected {
+  background: linear-gradient(135deg, @accent, @accent2);
+  border: 1px solid rgba(0,255,213,0.5);
+  color: #0f1117;
+  box-shadow: 0 0 12px rgba(0,255,213,0.3);
+}

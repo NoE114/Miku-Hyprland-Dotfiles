@@ -1,0 +1,33 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "300x10-20+50"
+    transparency = 8
+    frame_width = 2
+    frame_color = "#4dd0e1"
+    separator_color = "#00ffd5"
+    sort = yes
+    font = JetBrainsMono Nerd Font 10
+    corner_radius = 12
+    line_height = 0
+    padding = 10
+    horizontal_padding = 12
+    offset = 16x16
+    icon_position = left
+    word_wrap = yes
+
+[urgency_low]
+    background = "#0f1117"
+    foreground = "#e6f7ff"
+    timeout = 4
+
+[urgency_normal]
+    background = "#131722"
+    foreground = "#e6f7ff"
+    timeout = 6
+
+[urgency_critical]
+    background = "#1a1f27"
+    foreground = "#ffb4b4"
+    frame_color = "#ff6b6b"
+    timeout = 0

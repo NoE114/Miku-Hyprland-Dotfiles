@@ -1,72 +1,24 @@
 # Miku-Hyprland-Dotfiles – “The First Sound of the Future”
 
-Hatsune Miku–inspired Arch Linux Hyprland rice with cyber‑futuristic aesthetics, music‑driven UI, and dynamic theming. Focused on a clean, fast, immersive, and expressive workflow where the desktop feels like Miku herself.
+Arch Linux Hyprland rice with cyber‑futuristic aesthetics, music‑driven UI, and dynamic theming. Clean, fast, immersive, expressive—Miku as the OS.
 
-## Core Concept
-- Treat Miku as a digital instrument/creative hub; UI adapts to music, wallpaper, and mood.
-- Palette: turquoise + metallic gray base, neon accents, soft glow, DX7‑style grid patterns.
-- Embed subtle “01” marks and occasional negi (leek) easter eggs.
+## What’s Included (dotfiles)
+- **Hyprland** (`config/hypr/hyprland.conf`): Blur/rounded, beat‑friendly animations, keybind workflow, wallpaper auto‑palette hook.
+- **Waybar** (`config/waybar/`): Minimal icon bar, turquoise nodes, music + system modules.
+- **Palette sync** (`config/hypr/palette-sync.sh`): wal‑based color extraction → shared palette.
+- **Rofi launcher** (`config/rofi/miku.rasi`): JP/EN typography, neon glow selection.
+- **Kitty/Foot** (`config/kitty/`, `config/foot/`): Transparent acrylic terminals.
+- **CAVA + MPD/ncmpcpp** (`config/cava/`, `config/mpd/`, `config/ncmpcpp/`): Music + visualization.
+- **Dunst** (`config/dunst/dunstrc`): Right‑side glow notifications.
+- **Hyprlock + SDDM** (`config/hyprlock/`, `config/sddm/theme.conf`): Cyber lock/login with “01”.
+- **Fastfetch** (`config/fastfetch/`): Miku ASCII ID card.
 
-## Components & Customization
-### Hyprland
-- Smooth animations with blur, shadows, rounded corners; workspace transitions tuned to beats.
-- Keybind‑first, mouse‑optional workflow with modal navigation.
-- Wallpaper‑driven color extraction to feed GTK/Waybar/terminal/CAVA themes.
+## Quick Start
+1) Install: `hyprland waybar swww rofi wofi dunst cava mpd ncmpcpp kitty foot fastfetch sddm hyprlock jq python-pywal playerctl swww`.
+2) Copy `config/` to `~/.config/` (or symlink). Ensure `~/.config/wallpapers/miku-default.jpg` exists (any Miku image works).
+3) Run palette sync: `~/.config/hypr/palette-sync.sh ~/.config/wallpapers/miku-default.jpg`.
+4) Start Hyprland; Waybar, Dunst, MPD, CAVA autostart. Set mpd music dir in `config/mpd/mpd.conf`.
 
-### Waybar
-- Minimal, icon‑heavy bar with turquoise highlights.
-- Workspace indicators rendered as digital nodes; separators as thin neon lines.
-- Music segment shows track info and BPM, exposes visualizer state.
-
-### Quickshell Control Center
-- Glassmorphism panel with toggles: Wi‑Fi, Bluetooth, audio output, mic, night mode.
-- Soft glow borders and DX7 grid background; right‑side slide‑in gesture.
-
-### Notifications
-- Slide‑in shade on the right with synth‑wave sound cues and turquoise glow outlines.
-
-### Music & Visualization
-- MPD/Spotify with ncmpcpp; CAVA vertical bars or circular waveform in turquoise neon.
-- UI accent colors react to genre/BPM; optional idle waveform in lockscreen.
-
-### Terminal
-- Foot/Kitty with transparent acrylic effect; Nerd Font with JP glyph support.
-- Fastfetch banner uses custom Miku ASCII as a digital ID card (hostname, uptime).
-- Supports image previews and inline pixel/Miku art.
-
-### Theming & Visuals
-- Animated wallpapers (Wallpaper Engine/alternative) with subtle motion, performance friendly.
-- Auto‑extract colors from wallpaper; propagate to GTK, Waybar, Terminal, CAVA.
-- Mood profiles: “Studio” (neutral gray + turquoise), “Stage” (neon + higher glow), “Chill” (pastel turquoise + soft blur).
-
-### Lockscreen & Login
-- Hyprlock with cyber idle Miku animation and digital font clock.
-- SDDM themed splash/login with metallic gray base, turquoise highlights, and “01” marker.
-
-### Launcher
-- Rofi/Wofi themed with bilingual JP/EN typography, instant search, clutter‑free grid.
-- Accent glow on selection; optional negi icon easter egg.
-
-## Identity Details
-- Primary text cues: “The First Sound of the Future” and “Find Your Music.”
-- Subtle “01” in headers, lockscreen, and bar; negi motifs hidden in launcher/help overlays.
-
-## Suggested File Layout (dotfiles)
-- `~/.config/hypr/` – Hyprland config, animations, workspace tuning.
-- `~/.config/waybar/` – Waybar modules, digital node workspaces, music segment.
-- `~/.config/quickshell/` – Control center glass panel.
-- `~/.config/dunst/` – Notification shade styling.
-- `~/.config/ncmpcpp/` & `~/.config/cava/` – Music player + visualizer profiles.
-- `~/.config/kitty/` or `~/.config/foot/` – Terminal theming, fastfetch ASCII.
-- `~/.config/rofi/` or `~/.config/wofi/` – Launcher theme.
-- `~/.config/hyprlock/` & `~/.config/sddm-themes/miku/` – Lockscreen and login.
-
-## Quick Start (outline)
-1. Install core packages: `hyprland waybar quickshell rofi wofi dunst cava mpd ncmpcpp kitty foot fastfetch sddm hyprlock`.
-2. Place dotfiles per layout above; enable SDDM and Hyprland session.
-3. Set animated wallpaper and run palette extractor script to sync colors.
-4. Start mpd/Spotify + CAVA; enable music‑reactive accent pipeline.
-
-## Notes
-- Keep performance in mind: prefer subtle motion, limit blur radius on low‑power GPUs.
-- All elements aim for a fast, minimal, expressive feel that keeps Miku front and center.
+## Notes / Identity
+- Palette: turquoise + metallic gray, neon accent, DX7 grid inspiration; “01” and negi easter eggs.
+- Mood: Studio (neutral), Stage (neon/glow), Chill (soft blur). Tune blur and gaps for performance GPUs.

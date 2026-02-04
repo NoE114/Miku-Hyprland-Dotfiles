@@ -1,0 +1,15 @@
+[general]
+bars = 24
+framerate = 60
+autosens = 1
+
+[color]
+foreground = '#4dd0e1'
+background = '#0f111700'
+gradient = 1
+gradient_color_1 = '#4dd0e1'
+gradient_color_2 = '#00ffd5'
+
+[output]
+method = ncurses
+orientation = vertical

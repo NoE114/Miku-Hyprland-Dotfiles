@@ -1,0 +1,66 @@
+{
+  // Miku Waybar – minimal icon bar with turquoise highlights
+  "layer": "top",
+  "position": "top",
+  "margin": "8 8 0 8",
+  "spacing": 8,
+  "modules-left": ["custom/logo", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["mpd", "pulseaudio", "network", "bluetooth", "battery", "tray"],
+  "custom/logo": {
+    "format": "󰀂 01",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "󰮯"
+    }
+  },
+  "clock": {
+    "format": "  %H:%M",
+    "tooltip": true,
+    "tooltip-format": "<b>%A</b>\n%d %B %Y"
+  },
+  "mpd": {
+    "format": "  {stateIcon} {title} [{elapsed}/{total}]",
+    "format-paused": "  {title}",
+    "unknown-tag": "…",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "tooltip": true,
+    "scroll-step": 3,
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    }
+  },
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰖪",
+    "tooltip": true
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-connected": "󰂯 {device_alias}",
+    "tooltip": true
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": "󰂄 {capacity}%",
+    "tooltip": true,
+    "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  }
+}

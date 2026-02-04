@@ -1,0 +1,18 @@
+{
+  "logo": {
+    "type": "text",
+    "padding": {
+      "right": 2
+    },
+    "text": [
+      " /)  /)   ミク ",
+      "( ･ ᴗ ･)  01 ",
+      "/づ  づ  ☆  "
+    ],
+    "foreground": "#4dd0e1"
+  },
+  "display": {
+    "separator": "",
+    "color": "#00ffd5"
+  }
+}
