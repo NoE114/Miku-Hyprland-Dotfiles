@@ -1,0 +1,70 @@
+:root {
+  --miku: #4dd0e1;
+  --miku-accent: #00ffd5;
+  --bg: #0f1117;
+  --bg-soft: #161b22;
+  --fg: #e6f7ff;
+  --shadow: rgba(12, 22, 34, 0.7);
+}
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans JP", monospace;
+  font-size: 12px;
+}
+
+window#waybar {
+  background: rgba(15, 17, 23, 0.75);
+  border: 1px solid var(--miku);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px var(--shadow);
+  padding: 6px 10px;
+}
+
+#custom-logo {
+  color: var(--miku-accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+tooltip {
+  background: var(--bg-soft);
+  border: 1px solid var(--miku);
+  color: var(--fg);
+  border-radius: 8px;
+}
+
+#workspaces button {
+  color: var(--fg);
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+#workspaces button.active {
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--miku), var(--miku-accent));
+  border-color: var(--miku);
+  box-shadow: 0 0 12px rgba(77, 208, 225, 0.35);
+}
+
+#workspaces button:hover {
+  border-color: var(--miku);
+}
+
+#clock, #mpd, #pulseaudio, #network, #bluetooth, #battery, #tray {
+  background: var(--bg-soft);
+  border-radius: 10px;
+  padding: 4px 8px;
+  border: 1px solid rgba(77, 208, 225, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(0, 255, 213, 0.06);
+}
+
+#mpd.playing {
+  border-color: var(--miku);
+  box-shadow: 0 0 8px rgba(0, 255, 213, 0.35);
+}
+
+#pulseaudio.muted {
+  opacity: 0.6;
+}
