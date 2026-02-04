@@ -13,11 +13,27 @@ Arch Linux Hyprland rice with cyber‑futuristic aesthetics, music‑driven UI, 
 - **Hyprlock + SDDM** (`config/hyprlock/`, `config/sddm/theme.conf`): Cyber lock/login with “01”.
 - **Fastfetch** (`config/fastfetch/`): Miku ASCII ID card.
 
-## Quick Start
-1) Install: `hyprland waybar swww rofi wofi dunst cava mpd ncmpcpp kitty foot fastfetch sddm hyprlock jq python-pywal playerctl swww`.
+## Quick Start (Arch)
+Automated install:
+```bash
+git clone https://github.com/NoE114/Miku-Hyprland-Dotfiles.git
+cd Miku-Hyprland-Dotfiles
+chmod +x install.sh
+./install.sh
+```
+
+The script will:
+- Verify Arch/Arch-based system
+- Install required packages via `pacman`
+- Sync `config/` into `~/.config/`
+- Prompt to set your monitor name and resolution (writes `~/.config/hypr/monitor.conf`)
+
+Manual install (if you prefer):
+1) Install: `hyprland waybar swww rofi wofi dunst cava mpd ncmpcpp kitty foot fastfetch sddm hyprlock jq python-pywal playerctl`.
 2) Copy `config/` to `~/.config/` (or symlink). Ensure `~/.config/wallpapers/miku-default.jpg` exists (any Miku image works).
-3) Run palette sync: `~/.config/hypr/palette-sync.sh ~/.config/wallpapers/miku-default.jpg`.
-4) Start Hyprland; Waybar, Dunst, MPD, CAVA autostart. Set mpd music dir in `config/mpd/mpd.conf`.
+3) To set resolution: edit `~/.config/hypr/monitor.conf` (replacing the default line) with `monitor = <name>,<res@hz>,auto,1` (e.g., `monitor = eDP-1,1920x1080@60,auto,1`).
+4) Run palette sync: `~/.config/hypr/palette-sync.sh ~/.config/wallpapers/miku-default.jpg`.
+5) Start Hyprland; Waybar, Dunst, MPD, CAVA autostart. Set mpd music dir in `config/mpd/mpd.conf`.
 
 ## Notes / Identity
 - Palette: turquoise + metallic gray, neon accent, DX7 grid inspiration; “01” and negi easter eggs.
